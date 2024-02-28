@@ -1,0 +1,35 @@
+#include <iostream>
+
+using namespace std;
+
+bool isNice(int n){
+    while(n > 0){
+        if(n % 100 == 69){
+            return true;
+        }
+        n /= 10;
+    }
+    
+    return false;
+}
+
+int main()
+{
+    int n, num, saizecisinoua = 0;
+    
+    cin >> n;
+    
+    while(n){
+        cin >> num;
+        
+        if(isNice(num) == true){
+            saizecisinoua ++;
+        }
+        
+        --n;
+    }
+    
+    cout << saizecisinoua;
+
+    return 0;
+}
